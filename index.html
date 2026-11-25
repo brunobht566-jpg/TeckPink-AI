@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeckPink AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>TeckPink AI</h1>
+        <p>Uma pergunta. Três inteligências.</p>
+    </header>
+
+    <main>
+        <section class="chat-window" aria-label="Conversa com as IAs">
+            <header class="chat-cabecalho">
+                <div class="chat-avatar">TP</div>
+                <div>
+                    <h2>TeckPink AI</h2>
+                    <p>ChatGPT · Gemini · Meta AI</p>
+                </div>
+            </header>
+
+            <div class="conversa" id="conversa" role="log" aria-live="polite" aria-label="Mensagens da conversa">
+                <div class="mensagem mensagem-ia">
+                    <strong class="nome-mensagem">TeckPink AI</strong>
+                    <p>Olá! Envie uma pergunta para começar.</p>
+                </div>
+            </div>
+
+            <div class="chat-compositor">
+                <textarea
+                    id="pergunta"
+                    rows="2"
+                    placeholder="Digite uma mensagem..."
+                    aria-label="Digite uma mensagem"
+                ></textarea>
+                <div class="chat-acoes">
+                    <button id="consultar" type="button">
+                        Enviar pergunta
+                    </button>
+                    <button id="novaConversa" class="btn-limpar" type="button">
+                        Nova conversa
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="historico">
+            <h2>Histórico de conversas</h2>
+            <div id="listaHistorico">
+                <p>Nenhuma conversa salva.</p>
+            </div>
+            <button id="limparHistorico" class="btn-limpar" type="button">
+                Limpar histórico
+            </button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #100d18;
+    color: white;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    color: #c084fc;
+    font-size: 35px;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.chat-window {
+    max-width: 900px;
+    margin: 20px auto;
+    overflow: hidden;
+    background: #20192e;
+    border: 1px solid #513477;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px #0005;
+}
+
+.chat-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: #2a2039;
+    border-bottom: 1px solid #513477;
+    text-align: left;
+}
+
+.chat-avatar {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 50%;
+    background: #9333ea;
+    color: white;
+    font-weight: bold;
+}
+
+.chat-cabecalho h2 {
+    color: white;
+    font-size: 1.05rem;
+}
+
+.chat-cabecalho p {
+    margin-top: 4px;
+    color: #c4b5d4;
+    font-size: 0.85rem;
+}
+
+.conversa {
+    min-height: 300px;
+    max-height: 55vh;
+    overflow-y: auto;
+    padding: 22px;
+    background: #151020;
+}
+
+.chat-compositor {
+    padding: 14px 18px;
+    background: #20192e;
+    border-top: 1px solid #513477;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 58px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #7042a8;
+    background: #151020;
+    color: white;
+    resize: vertical;
+    font: inherit;
+}
+
+.chat-acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.chat-acoes button {
+    width: auto;
+    min-width: 140px;
+    padding: 11px 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #9333ea;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.chat-acoes button:hover {
+    background: #a855f7;
+}
+
+.chat-acoes button.btn-limpar {
+    background: #393044;
+    border: 1px solid #7042a8;
+}
+
+.chat-acoes button.btn-limpar:hover {
+    background: #513477;
+}
+
+.chat-acoes button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
+
+.btn-limpar {
+    background: #393044;
+    border: 1px solid #7042a8;
+}
+
+.btn-limpar:hover {
+    background: #513477;
+}
+
+.erro {
+    color: #fca5a5;
+}
+
+.mensagem {
+    width: fit-content;
+    max-width: min(80%, 700px);
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-radius: 16px 16px 16px 4px;
+    overflow-wrap: anywhere;
+}
+
+.mensagem p {
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.mensagem-ia {
+    margin-right: auto;
+    background: #151020;
+    border: 1px solid #513477;
+}
+
+.mensagem-usuario {
+    margin-left: auto;
+    background: #6332a0;
+    border-radius: 16px 16px 4px 16px;
+}
+
+.nome-mensagem {
+    display: block;
+    margin-bottom: 5px;
+    color: #d8b4fe;
+    font-size: 0.9rem;
+}
+
+.mensagem-usuario .nome-mensagem {
+    color: #f3e8ff;
+}
+
+.historico {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #20192e;
+    border-radius: 15px;
+}
+
+.historico button {
+    display: block;
+    width: auto;
+    min-width: 180px;
+    padding: 11px 16px;
+    margin: 15px 0 0 auto;
+    border-radius: 10px;
+    border: 1px solid #7042a8;
+    background: #393044;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.historico button:hover {
+    background: #513477;
+}
+
+.historico button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
+
+.historico h2 {
+    color: #c084fc;
+    margin-bottom: 20px;
+}
+
+.item-historico {
+    background: #151020;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #513477;
+    color: white;
+    overflow-wrap: anywhere;
+}
+
+.item-historico small {
+    display: block;
+    color: #aaa;
+    margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+    .conversa {
+        padding: 16px;
+    }
+
+    .mensagem {
+        max-width: 92%;
+    }
+
+    .chat-acoes {
+        flex-direction: column;
+    }
+
+    .chat-acoes button {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
