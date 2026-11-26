@@ -84,9 +84,9 @@ async function enviarPergunta() {
 
     adicionarMensagem("Você", pergunta, "usuario");
     const respostasAguardando = [
-        ["ChatGPT", "Consultando..."],
+        ["OpenAI (ChatGPT)", "Consultando..."],
         ["Gemini", "Consultando..."],
-        ["Meta AI", "Consultando..."]
+        ["Groq", "Consultando..."]
     ].map(([nome, texto]) => adicionarMensagem(nome, texto, "ia"));
 
     try {

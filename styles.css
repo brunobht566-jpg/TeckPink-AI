@@ -7,32 +7,102 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #100d18;
-    color: white;
+    background: #000;
+    color: #f2f2f2;
     padding: 20px;
 }
 
-header {
+.site-header {
     text-align: center;
-    padding: 30px;
+    padding: 22px 20px 30px;
 }
 
-header h1 {
-    color: #c084fc;
+.site-header h1 {
+    color: #f5f5f5;
     font-size: 35px;
 }
 
-header p {
-    color: #aaa;
+.site-header p {
+    color: #bdbdbd;
     margin-top: 10px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.apresentacao {
+    max-width: 960px;
+    margin: 0 auto 22px;
+    padding: 20px 16px 30px;
+    border: 1px solid #252525;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.apresentacao-cabecalho h2 {
+    color: #f3f3f3;
+    font-size: 20px;
+}
+
+.apresentacao p {
+    margin-top: 8px;
+    color: #bdbdbd;
+}
+
+.servidor-info {
+    margin: 34px 0 26px;
+}
+
+.servidor-info h3 {
+    font-size: 20px;
+}
+
+.provedores {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.provedor-card {
+    min-width: 0;
+    padding: 13px 10px 12px;
+    border: 1px solid #252525;
+    border-radius: 12px;
+}
+
+.provedor-icone {
+    width: 24px;
+    height: 24px;
+    color: #f2f2f2;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.provedor-card h4 {
+    margin-top: 8px;
+    font-size: 19px;
+}
+
+.provedor-card p {
+    margin-top: 7px;
+}
+
+.respostas-titulo {
+    margin-top: 34px;
+    font-size: 18px;
 }
 
 .chat-window {
     max-width: 900px;
     margin: 20px auto;
     overflow: hidden;
-    background: #20192e;
-    border: 1px solid #513477;
+    background: #090909;
+    border: 1px solid #252525;
     border-radius: 18px;
     box-shadow: 0 12px 35px #0005;
 }
@@ -42,8 +112,8 @@ header p {
     align-items: center;
     gap: 12px;
     padding: 16px 20px;
-    background: #2a2039;
-    border-bottom: 1px solid #513477;
+    background: #101010;
+    border-bottom: 1px solid #252525;
     text-align: left;
 }
 
@@ -53,19 +123,19 @@ header p {
     height: 44px;
     place-items: center;
     border-radius: 50%;
-    background: #9333ea;
-    color: white;
+    background: #f2f2f2;
+    color: #111;
     font-weight: bold;
 }
 
 .chat-cabecalho h2 {
-    color: white;
+    color: #f2f2f2;
     font-size: 1.05rem;
 }
 
 .chat-cabecalho p {
     margin-top: 4px;
-    color: #c4b5d4;
+    color: #aaa;
     font-size: 0.85rem;
 }
 
@@ -74,13 +144,13 @@ header p {
     max-height: 55vh;
     overflow-y: auto;
     padding: 22px;
-    background: #151020;
+    background: #050505;
 }
 
 .chat-compositor {
     padding: 14px 18px;
-    background: #20192e;
-    border-top: 1px solid #513477;
+    background: #090909;
+    border-top: 1px solid #252525;
 }
 
 textarea {
@@ -89,9 +159,9 @@ textarea {
     min-height: 58px;
     padding: 12px 14px;
     border-radius: 10px;
-    border: 1px solid #7042a8;
-    background: #151020;
-    color: white;
+    border: 1px solid #333;
+    background: #050505;
+    color: #f2f2f2;
     resize: vertical;
     font: inherit;
 }
@@ -116,16 +186,18 @@ textarea {
 }
 
 .chat-acoes button:hover {
-    background: #a855f7;
+    background: #d7d7d7;
+    color: #111;
 }
 
 .chat-acoes button.btn-limpar {
-    background: #393044;
-    border: 1px solid #7042a8;
+    background: #171717;
+    border: 1px solid #333;
+    color: #f2f2f2;
 }
 
 .chat-acoes button.btn-limpar:hover {
-    background: #513477;
+    background: #252525;
 }
 
 .chat-acoes button:disabled {
@@ -134,12 +206,12 @@ textarea {
 }
 
 .btn-limpar {
-    background: #393044;
-    border: 1px solid #7042a8;
+    background: #171717;
+    border: 1px solid #333;
 }
 
 .btn-limpar:hover {
-    background: #513477;
+    background: #252525;
 }
 
 .erro {
@@ -162,32 +234,32 @@ textarea {
 
 .mensagem-ia {
     margin-right: auto;
-    background: #151020;
-    border: 1px solid #513477;
+    background: #090909;
+    border: 1px solid #252525;
 }
 
 .mensagem-usuario {
     margin-left: auto;
-    background: #6332a0;
+    background: #262626;
     border-radius: 16px 16px 4px 16px;
 }
 
 .nome-mensagem {
     display: block;
     margin-bottom: 5px;
-    color: #d8b4fe;
+    color: #f2f2f2;
     font-size: 0.9rem;
 }
 
 .mensagem-usuario .nome-mensagem {
-    color: #f3e8ff;
+    color: #fff;
 }
 
 .historico {
     max-width: 1100px;
     margin: 30px auto;
     padding: 25px;
-    background: #20192e;
+    background: #090909;
     border-radius: 15px;
 }
 
@@ -198,15 +270,15 @@ textarea {
     padding: 11px 16px;
     margin: 15px 0 0 auto;
     border-radius: 10px;
-    border: 1px solid #7042a8;
-    background: #393044;
-    color: white;
+    border: 1px solid #333;
+    background: #171717;
+    color: #f2f2f2;
     font: inherit;
     cursor: pointer;
 }
 
 .historico button:hover {
-    background: #513477;
+    background: #252525;
 }
 
 .historico button:disabled {
@@ -215,17 +287,17 @@ textarea {
 }
 
 .historico h2 {
-    color: #c084fc;
+    color: #f2f2f2;
     margin-bottom: 20px;
 }
 
 .item-historico {
-    background: #151020;
+    background: #050505;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 10px;
-    border: 1px solid #513477;
-    color: white;
+    border: 1px solid #252525;
+    color: #f2f2f2;
     overflow-wrap: anywhere;
 }
 
@@ -236,6 +308,18 @@ textarea {
 }
 
 @media (max-width: 700px) {
+    body {
+        padding: 14px;
+    }
+
+    .provedores {
+        grid-template-columns: 1fr;
+    }
+
+    .servidor-info {
+        margin: 28px 0 22px;
+    }
+
     .conversa {
         padding: 16px;
     }

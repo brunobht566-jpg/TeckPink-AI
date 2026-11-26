@@ -9,18 +9,62 @@
 </head>
 <body>
 
-    <header>
+    <header class="site-header">
         <h1>TeckPink AI</h1>
         <p>Uma pergunta. Três inteligências.</p>
     </header>
 
     <main>
+        <section class="apresentacao" aria-labelledby="apresentacao-titulo">
+            <div class="apresentacao-cabecalho">
+                <h2 id="apresentacao-titulo">TeckPink AI</h2>
+                <p>Uma pergunta enviada para três modelos</p>
+            </div>
+
+            <div class="servidor-info">
+                <h3>Servidor Node.js + Express</h3>
+                <p>Gerencia as três requisições</p>
+            </div>
+
+            <div class="provedores" aria-label="Provedores de inteligência artificial">
+                <article class="provedor-card">
+                    <svg class="provedor-icone" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 12 6 19m6-7 6 7M12 12V5"></path>
+                        <circle cx="12" cy="4" r="2"></circle>
+                        <circle cx="5" cy="20" r="2"></circle>
+                        <circle cx="19" cy="20" r="2"></circle>
+                    </svg>
+                    <h4>OpenAI</h4>
+                    <p>ChatGPT</p>
+                </article>
+
+                <article class="provedor-card">
+                    <svg class="provedor-icone" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2c1.4 5 3 6.6 8 8-5 1.4-6.6 3-8 8-1.4-5-3-6.6-8-8 5-1.4 6.6-3 8-8Z"></path>
+                    </svg>
+                    <h4>Gemini</h4>
+                    <p>Google AI Studio</p>
+                </article>
+
+                <article class="provedor-card">
+                    <svg class="provedor-icone" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 4a3 3 0 0 0-5 2 3 3 0 0 0-1 5 3 3 0 0 0 2 5 3 3 0 0 0 5 2V4Zm6 0a3 3 0 0 1 5 2 3 3 0 0 1 1 5 3 3 0 0 1-2 5 3 3 0 0 1-5 2V4Z"></path>
+                        <path d="M9 8h2m-2 5h2m4-5h-2m2 5h-2"></path>
+                    </svg>
+                    <h4>Groq</h4>
+                    <p>Llama ou outro modelo</p>
+                </article>
+            </div>
+
+            <h3 class="respostas-titulo">Três respostas independentes</h3>
+        </section>
+
         <section class="chat-window" aria-label="Conversa com as IAs">
             <header class="chat-cabecalho">
                 <div class="chat-avatar">TP</div>
                 <div>
                     <h2>TeckPink AI</h2>
-                    <p>ChatGPT · Gemini · Meta AI</p>
+                    <p>OpenAI · Gemini · Groq</p>
                 </div>
             </header>
 
